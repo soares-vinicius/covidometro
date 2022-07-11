@@ -1,4 +1,4 @@
 export interface Stats {
   label: string;
-  indicator: string;
+  indicator: number | string;
 }

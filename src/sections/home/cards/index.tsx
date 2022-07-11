@@ -3,18 +3,22 @@ import Stats from "../../../components/stats";
 import Subtitle from "../../../components/subtitle";
 
 import * as S from "./styles";
+import * as I from "./interfaces";
 
-const Cards: React.FC = () => {
+export default function Cards({
+  TotalConfirmed,
+  TotalDeaths,
+  Country,
+}: I.Cards) {
+  const fatality = ((TotalDeaths / TotalConfirmed) * 100).toFixed(2);
   return (
     <S.Container>
-      <Subtitle text="Pais" />
+      <Subtitle text={Country} />
       <div className="card__indicators">
-        <Stats indicator="0" label="Total de casos" />
-        <Stats indicator="0" label="Mortes" />
-        <Stats indicator="0" label="Fatalidade" />
+        <Stats indicator={TotalConfirmed} label="Total de casos" />
+        <Stats indicator={TotalDeaths} label="Mortes" />
+        <Stats indicator={`${fatality}%`} label="Fatalidade" />
       </div>
     </S.Container>
   );
-};
-
-export default Cards;
+}
