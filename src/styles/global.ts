@@ -9,6 +9,8 @@ export default createGlobalStyle`
   
   body {
     -webkit-font-smoothing: antialiased;   
+    margin: 0;
+    padding: 0;
   }
 
   button {
