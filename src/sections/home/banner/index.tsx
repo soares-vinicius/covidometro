@@ -7,7 +7,7 @@ import * as S from "./styles";
 const Banner: React.FC = () => {
   return (
     <S.Container>
-      <div>
+      <div className='banner__text'>
         <Title text="Conheça o Covidômetro" />
         <p>
           Fique atualizado com velocidade e transparência. O Covidômetro é uma
@@ -15,7 +15,7 @@ const Banner: React.FC = () => {
           óbitos relacionados a pandemia da COVID-19 ao redor do mundo.
         </p>
       </div>
-      <div>
+      <div className="banner__image">
         <Doctors />
       </div>
     </S.Container>
