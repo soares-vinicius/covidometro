@@ -18,7 +18,9 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    getData();
+    setInterval(() => {
+      getData();
+    }, 5000);
   }, []);
   return (
     <>
